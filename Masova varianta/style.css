@@ -1,0 +1,164 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
+s pribyvajici sirkou pridavame media query pro...
+tablety:
+@media (min-width: 480px) {
+}
+notebook/pc:
+@media (min-width: 860px) {
+}
+*/
+
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+
+/* ------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ----- */
+/* ------------------------------- */
+
+
+/* nejdříve rozmístění jednotlivých receptů při různém rozlišení*/
+
+
+.recept-hlavni {
+    min-height: 200px;
+    border-bottom: 1px solid white;
+}
+
+.recept {
+    min-height: 90px;
+    border-bottom: 1px solid white;
+}
+
+@media ( min-width: 480px) {
+    .recept-hlavni {
+        min-height: 250px;
+    }
+
+    .recept {
+        min-height: 150px;
+        flex: 0 0 50%;
+    }
+    .recept:nth-child(2n+1) {
+        border-right: 1px solid white;
+    }
+
+    .recepty {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 860px) {
+    .doporucujeme {
+        display: flex;
+    }
+
+    .recept-hlavni {
+        flex: 1 0 33,33333%;
+        border-right: 1px solid white;
+    }
+
+    .recepty {
+        flex: 1 0 66,66666%;
+    }
+
+    .recept {
+        min-height: 200px;
+    }
+}
+
+/*nyní úprava textů v receptech */
+
+.recept-hlavni,
+.recept {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.popisky {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.recept-popisky {
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.recept-nazev1 {
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.recept-nazev {
+    color: white;
+    font-size: 18px;
+}
+
+@media (min-width: 480px) {
+    .recept-hlavni,
+    .recept {
+        padding: 20px;
+    }
+    .recept-nazev1 {
+        font-size: 36px;
+    }
+    .recept-nazev {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 860px) {
+    .recept-nazev1 {
+        font-size: 48px;
+    }
+    .recept-nazev {
+        font-size: 28px;
+    }
+}
+
+/*nyní obrázky na pozadí */
+
+.recept-hlavni,
+.recept {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.recept-hlavni {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background-image:url("images/burger.jpg");
+}
