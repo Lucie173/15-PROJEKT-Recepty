@@ -1,4 +1,3 @@
-/* nejsme vcerejsi, pouzivame moderni box model */
 html { box-sizing: border-box; }
 *, :after, :before { box-sizing: inherit; }
 
@@ -34,9 +33,6 @@ body {
 }
 
 
-/* ------------------------------- */
-/* ----- DOLE BUDE TVOJE CSS ----- */
-/* ------------------------------- */
 
 
 /* nejdříve rozmístění jednotlivých receptů při různém rozlišení*/
@@ -159,6 +155,6 @@ body {
 }
 
 .recept-hlavni {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background: linear-gradient("to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)");
     background-image:url("images/burger.jpg");
 }
