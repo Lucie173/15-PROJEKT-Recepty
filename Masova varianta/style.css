@@ -157,3 +157,39 @@ body {
 .recept-hlavni {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/burger.jpg");
 }
+
+.recept-hlavni:hover {
+    background-image: url("images/burger.jpg");
+}
+
+.recept-2 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/sushi.jpg");
+}
+
+.recept-2:hover {
+    background-image: url("images/sushi.jpg");
+}
+
+.recept-3 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/kure.jpg");
+}
+    
+.recept-3:hover {
+    background-image: url("images/kure.jpg");
+}
+
+.recept-4 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/rajcata.jpg");
+}
+
+.recept-4:hover {
+    background-image: url("images/rajcata.jpg");
+}
+
+.recept-5 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/grilovani.jpg");
+}
+
+.recept-5:hover {
+    background-image: url("images/grilovani.jpg");
+}
